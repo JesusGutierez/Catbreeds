@@ -1,0 +1,27 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button default-href="#"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{breed?.name ?? 'Not found'}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="column-flex">
+    <img
+      src="{{breed?.image?.url ?? 'https://nftcalendar.io/storage/uploads/2022/02/21/image-not-found_0221202211372462137974b6c1a.png'}}"
+      alt="{{breed?.name ?? 'Not found'}}">
+
+    <div class="breed-info" *ngIf="!!breed">
+      <ion-infinite-scroll>
+        <p class="description">{{breed.description}}</p>
+        <p>Temperament: {{breed.temperament}}</p>
+        <p>Country of origin: {{breed.origin}}</p>
+        <p>Intelligence: {{breed.intelligence}}/5</p>
+        <p>Adaptability: {{breed.adaptability}}/5</p>
+        <p>Life Span: {{breed.life_span}} years</p>
+      </ion-infinite-scroll>
+    </div>
+  </div>
+</ion-content>

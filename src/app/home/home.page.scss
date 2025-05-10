@@ -25,3 +25,41 @@
 #container a {
   text-decoration: none;
 }
+
+.center-text {
+  text-align: center;
+}
+
+.general-container {
+  --padding-start: 25px;
+  --padding-end: 25px;
+  --padding-top: 25px;
+  --padding-bottom: 25px;
+}
+
+.divider {
+  height: 20px;
+}
+
+.image-container {
+  height: 200px;
+  width: 200px;
+  margin: 0 auto;
+  object-fit: cover;
+}
+
+.card-container{
+  text-align: center;
+}
+
+.card-header{
+  display:  flex;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}
+
+.bold {
+  font-weight: bold;
+}
